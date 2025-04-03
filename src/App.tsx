@@ -12,7 +12,7 @@ function App() {
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   const fetchTodos = async () => {
-    const { data: items, errors } = await client.models.Todo.list();
+    const { data: items } = await client.models.Todo.list();
     alert(items.length +"개의 데이터를 가져왔습니다.")
   };
 
